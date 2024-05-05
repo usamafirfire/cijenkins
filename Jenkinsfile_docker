@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven "MAVEN3"
-        jdk "OracleJDK8"
+        jdk "Oraclejdk8"
     }
     
     environment {
@@ -11,15 +11,15 @@ pipeline {
 		NEXUS_PASS = 'admin'
 		RELEASE_REPO = 'vprofile-release'
 		CENTRAL_REPO = 'vpro-maven-central'
-		NEXUSIP = '172.31.2.121'
+		NEXUSIP = '172.31.6.130'
 		NEXUSPORT = '8081'
 		NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
         registryCredential = 'ecr:ap-south-1:AWScreds'
-        appRegistry = '281439847543.dkr.ecr.ap-south-1.amazonaws.com/vprofileappimg'
-        vprofileRegistry = "https://281439847543.dkr.ecr.ap-south-1.amazonaws.com"
+        appRegistry = '970960770802.dkr.ecr.ap-south-1.amazonaws.com/vprofileappimg'
+        vprofileRegistry = "https://970960770802.dkr.ecr.ap-south-1.amazonaws.com"
     }
 
     stages {
